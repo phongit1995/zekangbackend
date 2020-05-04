@@ -17,6 +17,19 @@ router.post("/add", validator(VALIDATION_ADD_PRODUCT),async(req,res)=>{
     }
 })
 router.post("/getlist", validator(VALIDATION_GETLIST_PRODUCT),async(req,res)=>{
-
+    try {
+        let resultGet = await ProductModel.getListProduct(req.body);
+        return responsHelper(req,res,null,resultGet);
+    } catch (error) {
+        return responsHelper(req,res,error);
+    }
+})
+router.get("/detial/:id",async(req,res)=>{
+    try {
+        let productDetial = await ProductModel.getDetialProduct(req.params.id);
+        return responsHelper(req,res,null,productDetial);
+    } catch (error) {
+        return responsHelper(req,res,error);
+    }
 })
 export default router ;
