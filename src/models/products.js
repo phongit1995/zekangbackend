@@ -8,9 +8,9 @@ export const productsFiels = {
     descriptions:'descriptions',
     images:'images',
     ingredients:'ingredients', // thành phần
-    usage:'usage' , // cách sử dụng
+    usage:'usage', // cách sử dụng
     heed:'heed', // chú ý ,
-    expirydate:'expirydate' , // hạn sử dụng 
+    expirydate:'expirydate', // hạn sử dụng 
     evaluation:'evaluation' // đánh giá
 }
 export const productsDb  = db.define('products',{
