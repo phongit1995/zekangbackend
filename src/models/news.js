@@ -2,7 +2,7 @@ import db from './connectdb';
 import  Sequelize  from 'sequelize';
 export const newsFiels = {
     id:'id',
-    title:'name',
+    title:'title',
     image:'image',
     description:'description',
     html:'html'
