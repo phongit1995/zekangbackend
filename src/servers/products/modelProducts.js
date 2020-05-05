@@ -1,4 +1,4 @@
-import {productsDb} from './../../models/products';
+import {productsDb,productsFiels} from './../../models/products';
 import {genId} from './../../commons/TextHelper';
 const NUMBER_LIMIT=10 ;
 class ProductModel{
@@ -18,6 +18,18 @@ class ProductModel{
     getDetialProduct = async(id)=>{
         return productsDb.findOne({
             id
+        })
+    }
+    updateProduct = async(data,id)=>{
+        return await productsDb.update({...data},{
+            where:{
+                [productsFiels.id]:id
+            }
+        })
+    }
+    deleteProduct = async (id)=>{
+        return await productsDb.destroy({
+            [productsFiels.id]:id
         })
     }
 }

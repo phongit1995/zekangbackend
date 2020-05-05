@@ -22,3 +22,25 @@ export const VALIDATION_ADD_PRODUCT = {
        [productsFiels.evaluation]:Joi.string()
     }
 }
+export const VALIDATION_UPDATE_PRODUCT = {
+    options: {allowUnknownBody: false},
+    body:{
+        [productsFiels.id]:Joi.string().required(),
+       [productsFiels.name]:Joi.string().required(),
+       [productsFiels.price]:Joi.number().required(),
+       [productsFiels.start]:Joi.number(),
+       [productsFiels.descriptions]:Joi.string(),
+       [productsFiels.images]:Joi.array().items(Joi.string()),
+       [productsFiels.ingredients]:Joi.string(),
+       [productsFiels.usage]:Joi.string(),
+       [productsFiels.heed]:Joi.string(),
+       [productsFiels.expirydate]:Joi.string(),
+       [productsFiels.evaluation]:Joi.string()
+    }
+}
+export const VALIDATION_DELETE_PRODUCT = {
+    options: {allowUnknownBody: false},
+    body:{
+        [productsFiels.id]:Joi.string().required()
+    }
+}
