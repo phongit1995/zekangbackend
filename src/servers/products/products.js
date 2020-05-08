@@ -39,8 +39,10 @@ router.post("/delete",validator(VALIDATION_DELETE_PRODUCT),
     async(req,res)=>{
         try {
             let deleteProduct = await ProductModel.deleteProduct(req.body.id);
+            console.log(deleteProduct);
             return responsHelper(req,res,null,deleteProduct);
         } catch (error) {
+            console.log(error);
             return responsHelper(req,res,error);
         }
 })

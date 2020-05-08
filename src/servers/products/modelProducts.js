@@ -31,7 +31,10 @@ class ProductModel{
     }
     deleteProduct = async (id)=>{
         return await productsDb.destroy({
-            [productsFiels.id]:id
+            where:{
+                [productsFiels.id]:id
+            }
+            
         })
     }
 }
