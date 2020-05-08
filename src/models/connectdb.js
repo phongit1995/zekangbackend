@@ -10,7 +10,8 @@ const configDB={
     dialectOptions: {connectTimeout: 1000},
     timezone: '+07:00',
     define:{
-        freezeTableName: true
+        freezeTableName: true,
+        charset:"utf8mb4"
     },
     sync:{force: false}
 }
