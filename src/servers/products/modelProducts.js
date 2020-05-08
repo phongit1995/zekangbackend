@@ -17,7 +17,9 @@ class ProductModel{
     }
     getDetialProduct = async(id)=>{
         return productsDb.findOne({
-            id
+            where:{
+                [productsFiels.id]:id
+            }
         })
     }
     updateProduct = async(data,id)=>{
