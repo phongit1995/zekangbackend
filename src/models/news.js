@@ -21,7 +21,7 @@ export const newsDB  = db.define('news',{
     [newsFiels.description]:{
         type:Sequelize.DataTypes.TEXT
     },
-    [newsFiels.description]:{
+    [newsFiels.html]:{
         type:Sequelize.DataTypes.TEXT
     },
 })
