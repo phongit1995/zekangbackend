@@ -13,13 +13,13 @@ export const VALIDATION_ADD_PRODUCT = {
        [productsFiels.name]:Joi.string().required(),
        [productsFiels.price]:Joi.number().required(),
        [productsFiels.start]:Joi.number(),
-       [productsFiels.descriptions]:Joi.string(),
+       [productsFiels.descriptions]:Joi.string().allow(null, ''),
        [productsFiels.images]:Joi.array().items(Joi.string()),
-       [productsFiels.ingredients]:Joi.string(),
-       [productsFiels.usage]:Joi.string(),
-       [productsFiels.heed]:Joi.string(),
-       [productsFiels.expirydate]:Joi.string(),
-       [productsFiels.evaluation]:Joi.string()
+       [productsFiels.ingredients]:Joi.string().allow(null, ''),
+       [productsFiels.usage]:Joi.string().allow(null, ''),
+       [productsFiels.heed]:Joi.string().allow(null, ''),
+       [productsFiels.expirydate]:Joi.string().allow(null, ''),
+       [productsFiels.evaluation]:Joi.string().allow(null, '')
     }
 }
 export const VALIDATION_UPDATE_PRODUCT = {
@@ -29,13 +29,13 @@ export const VALIDATION_UPDATE_PRODUCT = {
        [productsFiels.name]:Joi.string().required(),
        [productsFiels.price]:Joi.number().required(),
        [productsFiels.start]:Joi.number(),
-       [productsFiels.descriptions]:Joi.string(),
+       [productsFiels.descriptions]:Joi.string().allow(null, ''),
        [productsFiels.images]:Joi.array().items(Joi.string()),
-       [productsFiels.ingredients]:Joi.string(),
-       [productsFiels.usage]:Joi.string(),
-       [productsFiels.heed]:Joi.string(),
-       [productsFiels.expirydate]:Joi.string(),
-       [productsFiels.evaluation]:Joi.string()
+       [productsFiels.ingredients]:Joi.string().allow(null, ''),
+       [productsFiels.usage]:Joi.string().allow(null, ''),
+       [productsFiels.heed]:Joi.string().allow(null, ''),
+       [productsFiels.expirydate]:Joi.string().allow(null, ''),
+       [productsFiels.evaluation]:Joi.string().allow(null, '')
     }
 }
 export const VALIDATION_DELETE_PRODUCT = {
