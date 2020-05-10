@@ -29,7 +29,9 @@ class NewsModel {
     }
     deleteNews = async(id)=>{
         return await newsDB.destroy({
-            [newsFiels.id]:id
+            where:{
+                [newsFiels.id]:id
+            }
         })
     }
 }
