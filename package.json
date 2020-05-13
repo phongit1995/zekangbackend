@@ -22,6 +22,7 @@
     "express": "^4.17.1",
     "express-validation": "^1.0.2",
     "express-winston": "^4.0.3",
+    "gmail-send": "^1.8.10",
     "joi": "^10.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.5",
