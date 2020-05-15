@@ -1,5 +1,7 @@
 import {productsDb,productsFiels} from './../../models/products';
 import {genId} from './../../commons/TextHelper';
+import {Sequelize} from 'sequelize';
+const Op = Sequelize.Op
 const NUMBER_LIMIT=10 ;
 class ProductModel{
     addProduct= async (value)=>{
@@ -35,6 +37,15 @@ class ProductModel{
                 [productsFiels.id]:id
             }
             
+        })
+    }
+    searchProduct = async(name)=>{
+        return await productsDb.findAll({
+            where:{
+                [productsFiels.name]:{
+                    [Op.like]:`%${name}%`
+                }
+            }
         })
     }
 }

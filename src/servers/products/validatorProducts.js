@@ -44,3 +44,9 @@ export const VALIDATION_DELETE_PRODUCT = {
         [productsFiels.id]:Joi.string().required()
     }
 }
+export const VALIDATION_SEARCH_PRODUCT = {
+    options: {allowUnknownBody: false},
+    body:{
+        [productsFiels.name]:Joi.string().required()
+    }
+}

@@ -1,7 +1,8 @@
 import express from 'express';
 import validator from 'express-validation';
 import {VALIDATION_GETLIST_PRODUCT ,VALIDATION_ADD_PRODUCT ,
-VALIDATION_UPDATE_PRODUCT,VALIDATION_DELETE_PRODUCT} from './validatorProducts';
+VALIDATION_UPDATE_PRODUCT,VALIDATION_DELETE_PRODUCT,
+VALIDATION_SEARCH_PRODUCT} from './validatorProducts';
 import ProductModel from './modelProducts';
 import {responsHelper} from './../../commons/responsiveHelper';
 const router = express.Router();
@@ -54,4 +55,13 @@ router.get("/detial/:id",async(req,res)=>{
         return responsHelper(req,res,error);
     }
 })
+router.get("/search",validator(VALIDATION_SEARCH_PRODUCT),
+    async(req,res)=>{
+        try {
+            let dataSearch = await ProductModel.searchProduct(req.body.name);
+            return responsHelper(req,res,null,dataSearch);
+        } catch (error) {
+            return responsHelper(req,res,error);
+        }
+    })
 export default router ;
