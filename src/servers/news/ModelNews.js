@@ -17,7 +17,9 @@ class NewsModel {
     }
     getDetialNews = async (id)=>{
         return await newsDB.findOne({
-            id
+            where:{
+                [newsFiels.id]:id
+            }
         })
     }
     updateNews = async(data,id)=>{

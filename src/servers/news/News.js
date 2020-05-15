@@ -28,7 +28,7 @@ router.post("/getlist",validator(VALIDATION_GETLIST_NEWS),
 })
 router.get("/detial/:idnews",async(req,res)=>{
     try {
-        let detialNews = await ModelNews.getDetialNews(req.body.id);
+        let detialNews = await ModelNews.getDetialNews(req.params.idnews);
         return responsHelper(req,res,null,detialNews);
     } catch (error) {
         return responsHelper(req,res,null,error);
