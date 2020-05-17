@@ -55,7 +55,7 @@ router.get("/detial/:id",async(req,res)=>{
         return responsHelper(req,res,error);
     }
 })
-router.get("/search",validator(VALIDATION_SEARCH_PRODUCT),
+router.post("/search",validator(VALIDATION_SEARCH_PRODUCT),
     async(req,res)=>{
         try {
             let dataSearch = await ProductModel.searchProduct(req.body.name);
