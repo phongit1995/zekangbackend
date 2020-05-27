@@ -12,10 +12,10 @@ export const uploadCloudinary = (file)=>{
             unique_filename : false,
             folder:"zekang"
         },(error,result)=>{
-            console.log(result);
+            // console.log(result);
             if(!error){
                 reslove({
-                    url:result.url,
+                    url:result.secure_url,
                     original_filename:result.original_filename
                 });
             }
