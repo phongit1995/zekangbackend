@@ -13,7 +13,7 @@ export const VAIDATION_SEND_CONTACT = {
     body:{
         title:Joi.string().required(),
         name:Joi.string().required(),
-        phone:Joi.string().required(),
+        address:Joi.string().required(),
         email:Joi.string().required(),
         message:Joi.string().required()
     }

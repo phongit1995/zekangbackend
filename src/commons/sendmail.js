@@ -18,7 +18,7 @@ export const sendQuestion = async({name,phone,email,content})=>{
         `
     })
 }
-export const sendEmail = async({title,name,phone,email,message})=>{
+export const sendEmail = async({title,name,address,email,message})=>{
     return send({
         subject:"Zekang  Gửi Liên Hệ",
         to:process.env.GMAIL_TO,
@@ -27,7 +27,7 @@ export const sendEmail = async({title,name,phone,email,message})=>{
             <div>
                 <p> Tiêu Đề : ${title}</p>
                 <p> Tên Người Gửi : ${name}</p>
-                <p> Số Điện Thoại : ${phone}</p>
+                <p> Địa Chỉ : ${address}</p>
                 <p> Email : ${email}</p>
                 <p> Tin Nhắn : ${message}</p>
             </div>
