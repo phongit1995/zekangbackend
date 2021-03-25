@@ -18,10 +18,10 @@ let transporter = nodemailer.createTransport({
   });
 export const sendQuestion = async({name,phone,email,content})=>{
     return transporter.sendMail({
-        from: '"zekang 👻" <phong5202368@st.utc.edu.vn>',
+        from: '"zekang 👻" <phong5202368@st.utc.edu.vnYU>',
         subject:"Zekang  Gửi Ý Kiến Chuyên Gia",
-        //to:process.env.GMAIL_TO,
-        to:"phongit1995@gmail.com",
+        to:process.env.GMAIL_TO,
+        //to:"phongit1995@gmail.com",
         text:'Zekang  Gửi Ý Kiến Chuyên Gia',
         html:`
             <div>
