@@ -34,7 +34,8 @@ export const sendQuestion = async({name,phone,email,content})=>{
     })
 }
 export const sendEmail = async({title,name,address,email,message})=>{
-    return send({
+    return  transporter.sendMail({
+        from: '"zekang 👻" <phong5202368@st.utc.edu.vnYU>',
         subject:"Zekang  Gửi Liên Hệ",
         to:process.env.GMAIL_TO,
         text:'Zekang  Gửi Liên Hệ',
