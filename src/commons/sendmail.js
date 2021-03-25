@@ -18,7 +18,7 @@ let transporter = nodemailer.createTransport({
   });
 export const sendQuestion = async({name,phone,email,content})=>{
     return transporter.sendMail({
-        from: '"zekang 👻" <phong5202368@st.utc.edu.vnYU>',
+        from: '"zekang 👻" <phong5202368@st.utc.edu.vn>',
         subject:"Zekang  Gửi Ý Kiến Chuyên Gia",
         to:process.env.GMAIL_TO,
         //to:"phongit1995@gmail.com",
@@ -35,7 +35,7 @@ export const sendQuestion = async({name,phone,email,content})=>{
 }
 export const sendEmail = async({title,name,address,email,message})=>{
     return  transporter.sendMail({
-        from: '"zekang 👻" <phong5202368@st.utc.edu.vnYU>',
+        from: '"zekang 👻"<phong5202368@st.utc.edu.vn>',
         subject:"Zekang  Gửi Liên Hệ",
         to:process.env.GMAIL_TO,
         text:'Zekang  Gửi Liên Hệ',
